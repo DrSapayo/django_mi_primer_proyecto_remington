@@ -23,17 +23,21 @@ export const getPeliculasById = async (id) => {
 };
 
 export const createPeliculas = async (pelicula) => {
-    try{
+    try {
         const formData = new FormData();
         formData.append('titulo', pelicula.titulo);
         formData.append('descripcion', pelicula.descripcion);
-        if(pelicula.image){
-            formData.append('image', pelicula.image);
+        if (pelicula.imagen) {
+            formData.append('imagen', pelicula.imagen);  // Enviar el archivo de imagen
         }
-        const response = await axios.post(`${API_URL}/api/peliculas/`,formData);
+        const response = await axios.post(`${API_URL}/api/peliculas/`, formData, {
+            headers: {
+                'Content-Type': 'multipart/form-data'
+            }
+        });
         return response.data;
-    }catch(error){
-        console.error(`Error al crear una la pelicula : `, error)
+    } catch (error) {
+        console.error("Error al crear la pelicula: ", error);
         throw error;
     }
 };
@@ -44,7 +48,7 @@ export const updatePeliculas = async (id,pelicula) => {
         formData.append('titulo', pelicula.titulo);
         formData.append('descripcion', pelicula.descripcion);
         if(pelicula.image){
-            formData.append('image', pelicula.image);
+            formData.append('imagen', pelicula.image);
         }
         const response = await axios.put(`${API_URL}/api/peliculas/${id}/`,formData);
         return response.data;
