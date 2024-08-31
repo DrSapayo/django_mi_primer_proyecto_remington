@@ -2,6 +2,13 @@ import React, { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { Carousel, Card, Row, Col, Container } from 'react-bootstrap';
 import { getPeliculas } from '../actions/peliculasActions';
+import carruse_1 from '../assets/images/carruse_1.jpeg';
+import carruse_2 from '../assets/images/carruse_2.jpeg';
+import carruse_3 from '../assets/images/carruse_3.jpeg';
+import imagenquemeencontre from '../assets/images/bannerquemeencontre.png';
+import Waos from '../assets/images/Waos.png';
+import eldiavlo from '../assets/images/eldiavlo.png';
+import desesperacion from '../assets/images/desesperacion.png'
 import "../styles/home.css"
 
 const Home = () => {
@@ -33,34 +40,78 @@ const Home = () => {
         <Carousel.Item>
           <img
             className="d-block w-100"
-            src="./assets/images/carruse_1.jpg"
+            src={carruse_1}
             alt="Primera imagen"
           />
           <Carousel.Caption>
-            <h3>Primera Imagen</h3>
-            <p>Descripción de la primera imagen.</p>
+            <h3></h3>
+            <p></p>
           </Carousel.Caption>
         </Carousel.Item>
         <Carousel.Item>
           <img
             className="d-block w-100"
-            src="/images/carrusel2.jpg"
+            src={carruse_2}
             alt="Segunda imagen"
           />
           <Carousel.Caption>
-            <h3>Segunda Imagen</h3>
-            <p>Descripción de la segunda imagen.</p>
+            <h3></h3>
+            <p></p>
           </Carousel.Caption>
         </Carousel.Item>
         <Carousel.Item>
           <img
             className="d-block w-100"
-            src="/images/carrusel3.jpg"
+            src={carruse_3}
             alt="Tercera imagen"
           />
           <Carousel.Caption>
-            <h3>Tercera Imagen</h3>
-            <p>Descripción de la tercera imagen.</p>
+            <h3></h3>
+            <p></p>
+          </Carousel.Caption>
+        </Carousel.Item>
+        <Carousel.Item>
+          <img
+            className="d-block w-100"
+            src={imagenquemeencontre}
+            alt="Primera imagen"
+          />
+          <Carousel.Caption>
+            <h3></h3>
+            <p></p>
+          </Carousel.Caption>
+        </Carousel.Item>
+        <Carousel.Item>
+          <img
+            className="d-block w-100"
+            src={Waos}
+            alt="Primera imagen"
+          />
+          <Carousel.Caption>
+            <h3></h3>
+            <p></p>
+          </Carousel.Caption>
+        </Carousel.Item>
+        <Carousel.Item>
+          <img
+            className="d-block w-100"
+            src={eldiavlo}
+            alt="Primera imagen"
+          />
+          <Carousel.Caption>
+            <h3></h3>
+            <p></p>
+          </Carousel.Caption>
+          </Carousel.Item>
+          <Carousel.Item>
+          <img
+            className="d-block w-100"
+            src={desesperacion}
+            alt="Primera imagen"
+          />
+          <Carousel.Caption>
+            <h3></h3>
+            <p></p>
           </Carousel.Caption>
         </Carousel.Item>
       </Carousel>
